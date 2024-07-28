@@ -5,9 +5,9 @@ export default function HomeLayout({
   children: React.ReactNode;
 }) {
   return (
-    <section>
+    <main>
       <Header></Header>
       {children}
-    </section>
+    </main>
   );
 }
