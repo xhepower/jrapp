@@ -15,7 +15,7 @@ export function Links() {
     <nav>
       <ul>
         <li>
-          <Link className={`link ${pathname === "/" ? "active" : ""}`} href="/">
+          <Link className={`link ${pathname === "/" ? "active" : ""} `} href="/">
             Home
           </Link>
         </li>
