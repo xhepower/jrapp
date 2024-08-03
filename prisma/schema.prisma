@@ -23,4 +23,11 @@ model User {
   password String
   name    String?
   role    Role     @default(USER)
+  rutas Ruta[] @relation("UserRuta")
+}
+model Ruta{
+  id Int      @id @default(autoincrement())
+  name String   @unique
+  userId Int
+  user User? @relation("UserRuta", fields: [userId], references: [id])
 }

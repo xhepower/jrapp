@@ -4,6 +4,7 @@ import { iUser } from "../utils/IData";
 import AddUser from "./AddUser";
 import { revalidateTag } from "next/cache";
 import { getUsers } from "../actions";
+import User from "./User";
 
 function UserContainer() {
   const [isAdding, setIsAdding] = useState(false);
@@ -30,9 +31,10 @@ function UserContainer() {
     <>
       {isAdding == false ? (
         <div>
+          <h2>USUARIOS</h2>
           <button onClick={addUser}>Agregar usuario</button>
           {users.map((user: iUser) => {
-            return <p key={`user${user.id}`}>{user.id}</p>;
+            return <User user={user} key={`user${user.id}`}></User>;
           })}
         </div>
       ) : (

@@ -3,7 +3,9 @@ import { Links } from "./links";
 function Header() {
   return (
     <header>
-      <Links></Links>
+     <div>nombre,correo
+       y role</div>
+     <div>Salir</div>
     </header>
   );
 }

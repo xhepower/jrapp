@@ -5,7 +5,7 @@ export default function HomeLayout({
   children: React.ReactNode;
 }) {
   return (
-    <main className="bg-gray-600 container mx-auto px-2">
+    <main className="flex items-center justify-center h-screen bg-blue-100 columns-1">
       <Header></Header>
       {children}
     </main>
